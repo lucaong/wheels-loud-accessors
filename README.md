@@ -18,7 +18,7 @@ npm install wheels-loud-accessors
 **AMD / RequireJS**
 
 ```javascript
-// Remember to provide the dependency `wheels-class`
+// Remember to provide the dependencies `wheels-pubsub` and `wheels-class`
 require(["wheels-loud-accessors"], function( LoudAccessors ) {
   var foo = new LoudAccessors();
 });
