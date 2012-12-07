@@ -41,11 +41,11 @@
         return this._attributes[ name ];
       };
 
-      this.loudAccessors = function() {
+      this.attrAccessors = function() {
         var klass = this,
             args = Array.prototype.slice.call( arguments );
 
-        function makeAccessorsLoud( name ) {
+        function makeAccessors( name ) {
           Object.defineProperty( klass.prototype, name, {
             get: function() {
               return this.get( name );
@@ -59,9 +59,9 @@
         for ( var i = 0, len = args.length; i < len; i++ ) {
           if ( Object.defineProperty ) {
             if ( ({}).toString.call( args[ i ] ) === "[object Array]" ) {
-              klass.loudAccessors.apply( klass, args[ i ] );
+              klass.attrAccessors.apply( klass, args[ i ] );
             } else {
-              makeAccessorsLoud( args[ i ] );
+              makeAccessors( args[ i ] );
             }
           }
         }

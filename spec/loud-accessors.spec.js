@@ -146,12 +146,12 @@ function runTests( LoudAccessors ) {
 
 		describe("class methods", function() {
 
-			describe("loudAccessors", function() {
+			describe("attrAccessors", function() {
 				
 				it("defines a properties with loud setters", function() {
 					var spy = this.spy(),
 							Foo = LoudAccessors.subclass(function() {
-								this.loudAccessors("bar");
+								this.attrAccessors("bar");
 							}),
 							foo = new Foo();
 
@@ -168,7 +168,7 @@ function runTests( LoudAccessors ) {
 				it("defines properties with loud getters", function() {
 					var spy = this.spy(),
 							Foo = LoudAccessors.subclass(function() {
-								this.loudAccessors("bar");
+								this.attrAccessors("bar");
 							}),
 							foo = new Foo();
 

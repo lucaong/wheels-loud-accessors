@@ -67,7 +67,7 @@ In JavaScript engines that support Object.defineProperty, we can do even better:
 
 ```javascript
 var Foo = LoudAccessors.subclass(function() {
-      this.loudAccessors("bar")
+      this.attrAccessors("bar")
     }),
     foo = new Foo();
 
