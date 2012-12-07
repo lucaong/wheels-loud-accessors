@@ -39,6 +39,8 @@ require(["wheels-loud-accessors"], function( LoudAccessors ) {
 Usage
 -----
 
+`LoudAccessors` is a class (created with `wheels-class`) inheriting from `wheels-pubsub` and introducing `get` and `set` instance methods, as well as a `attrAccessor` class method.
+
 **Setters:**
 
 ```javascript
@@ -49,6 +51,8 @@ foo.on("change", function( evt, attribute, val ) {
 });
 
 foo.set( "bar", 123 ); // console: Attribute bar was set to value 123
+
+foo.set( "bar", 234, { silent: true } ); // 'silently' set attribute, no event triggered
 ```
 
 **Getters:**
@@ -61,9 +65,11 @@ foo.on("read", function( evt, attribute, val ) {
 });
 
 foo.get( "bar" ); // console: Attribute bar was read
+
+foo.get( "bar", { silent: true } ); // 'silently' get attribute, no event triggered
 ```
 
-In JavaScript engines that support Object.defineProperty, we can do even better:
+In JavaScript engines that support `Object.defineProperty`, we can even do without `get` and `set` methods:
 
 ```javascript
 var Foo = LoudAccessors.subclass(function() {
