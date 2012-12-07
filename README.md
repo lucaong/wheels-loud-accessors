@@ -1,7 +1,7 @@
 Wheels Loud Accessors
 =====================
 
-A constructor for objects with attribute accessors that emit change/read events. Fully compatible with CommonJS (Node), AMD and standard browser script tag include.
+A constructor for objects with attribute accessors that emit `change` or `read` events upon setting or getting an attribute. Fully compatible with CommonJS (Node), AMD and standard browser script tag include.
 
 
 Install
