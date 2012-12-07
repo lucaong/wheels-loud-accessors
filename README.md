@@ -39,7 +39,7 @@ require(["wheels-loud-accessors"], function( LoudAccessors ) {
 Usage
 -----
 
-`LoudAccessors` is a class (created with `wheels-class`) inheriting from `wheels-pubsub` and introducing `get` and `set` instance methods, as well as a `attrAccessor` class method.
+`LoudAccessors` is a class (created with `wheels-class`) inheriting from `wheels-pubsub` and introducing `get` and `set` instance methods, as well as an `attrAccessors` class method.
 
 **Setters:**
 
