@@ -56,8 +56,8 @@
           });
         }
 
-        for ( var i = 0, len = args.length; i < len; i++ ) {
-          if ( Object.defineProperty ) {
+        if ( Object.defineProperty ) {
+          for ( var i = 0, len = args.length; i < len; i++ ) {
             if ( ({}).toString.call( args[ i ] ) === "[object Array]" ) {
               klass.attrAccessors.apply( klass, args[ i ] );
             } else {
